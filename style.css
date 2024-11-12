@@ -1,0 +1,124 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000; /* Adjust as needed */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+    width: 1px; /* Adjust to fit well */
+    height: 4px;
+    max-height: 100%; /* Ensures it doesn’t exceed navbar height */
+    cursor: pointer;
+    margin-right: 15px; /* Adjust spacing if needed */
+}
+
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+/* Location and Dropdown Selection */
+.location-label, .dropdown-label {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.location-select, .dropdown-select {
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 14px;
+}
+
+/* Main content */
+main {
+    margin-top: 80px; /* Offset to avoid content being hidden behind the fixed navbar */
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Style for the sliding menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide the menu initially */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+    padding-top: 50px;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    left: 0; /* Slide the menu in */
+}
+
+.side-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
